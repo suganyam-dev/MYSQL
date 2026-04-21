@@ -1,0 +1,54 @@
+CREATE DATABASE ex;
+USE ex;
+
+CREATE TABLE flowers(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(23),
+    email VARCHAR(50),
+    age INT,
+    fees INT,
+    courseName VARCHAR(30),
+    branch VARCHAR(20),
+    place VARCHAR(20)
+);
+
+SHOW DATABASES;
+SHOW TABLES;
+INSERT INTO flowers(name, email, age, fees, courseName, branch, place)
+VALUES ("Suganya", "sugan@gmail.com", 25, 25000, "FullStack Development", "Iravathanallur", "Madurai");
+
+INSERT INTO flowers(name, email, age, fees, courseName, branch, place)
+VALUES ("Jeyamalathy", "jeya@gmail.com", 25, 20000, "FullStack Development", "Iravathanallur", "Madurai");
+
+INSERT INTO flowers(name, email, age, fees, courseName, branch, place)
+VALUES ("Nazima", "naz@gmail.com", 22, 15000, "AWS", "Arapalayam", "Trichy");
+
+INSERT INTO flowers(name, email, age, fees, courseName, branch, place)
+VALUES ("Murugeswari", "murug@gmail.com", 23, 5000, "AWS", "Arapalayam", "Madurai");
+select * from flowers;
+select id as "SNo:", name as "StudentName", email as "Email", age as "Age",fees as "Fees", courseName as "Course_Name", branch, place from flowers;
+Alter TABLE FLOWERS  ADD COLUMN  GENDER VARCHAR(10) AFTER AGE;
+UPDATE FLOWERS SET GENDER ="F" WHERE ID = 3;
+UPDATE FLOWERS SET GENDER = "FEMALE" WHERE ID = 5 OR ID = 7 OR ID = 9 OR ID =11 OR ID =13 OR  ID = 15 OR  ID =17 OR ID = 19 OR ID =21 OR ID =23;
+DESCRIBE FLOWERS;
+INSERT INTO flowers(name, email, age, fees, courseName, branch, place) VALUES
+("Anitha", "anitha@gmail.com", 24, 20000, "FullStack Development", "Anna Nagar", "Madurai"),
+("Karthik", "karthik@gmail.com", 26, 30000, "Java", "KK Nagar", "Chennai"),
+("Priya", "priya@gmail.com", 23, 15000, "Python", "Simmakkal", "Madurai"),
+("Rahul", "rahul@gmail.com", 27, 40000, "AWS", "T Nagar", "Chennai"),
+("Divya", "divya@gmail.com", 22, 18000, "Testing", "Anna Nagar", "Madurai"),
+("Arun", "arun@gmail.com", 25, 22000, "FullStack Development", "Velachery", "Chennai"),
+("Meena", "meena@gmail.com", 24, 17000, "Python", "Bypass Road", "Madurai"),
+("Suresh", "suresh@gmail.com", 28, 35000, "Java", "Tambaram", "Chennai"),
+("Lakshmi", "lakshmi@gmail.com", 23, 16000, "Testing", "Goripalayam", "Madurai"),
+("Vignesh", "vignesh@gmail.com", 26, 28000, "AWS", "OMR", "Chennai"),
+("Revathi", "revathi@gmail.com", 24, 21000, "FullStack Development", "Thirunagar", "Madurai"),
+("Manoj", "manoj@gmail.com", 27, 32000, "Java", "Adyar", "Chennai"),
+("Keerthi", "keerthi@gmail.com", 22, 14000, "Python", "Sellur", "Madurai"),
+("Ramesh", "ramesh@gmail.com", 29, 45000, "AWS", "Porur", "Chennai"),
+("Pooja", "pooja@gmail.com", 23, 19000, "Testing", "Anna Nagar", "Madurai"),
+("Senthil", "senthil@gmail.com", 28, 33000, "FullStack Development", "KK Nagar", "Chennai"),
+("Nisha", "nisha@gmail.com", 21, 13000, "Python", "Palanganatham", "Madurai"),
+("Kumar", "kumar@gmail.com", 30, 50000, "Java", "Tambaram", "Chennai"),
+("Aishwarya", "aishu@gmail.com", 24, 22000, "Testing", "Simmakkal", "Madurai"),
+("Prakash", "prakash@gmail.com", 27, 36000, "AWS", "Velachery", "Chennai");
